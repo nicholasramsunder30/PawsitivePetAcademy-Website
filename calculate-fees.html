@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your Pawsitive Pet Academy course fees, including discounts and VAT.">
+    <title>Calculate Fees | Pawsitive Pet Academy</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans (headings) and DM Sans (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <div class="container">
+            <span>Durban, KwaZulu-Natal</span>
+            <span class="topbar-tagline">Professional pet care education for every companion</span>
+        </div>
+    </div>
+
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Pawsitive Pet Academy home" width="150">
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+                Menu
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <details class="dropdown">
+                    <summary>Courses</summary>
+
+                    <div class="dropdown-menu">
+                        <a href="courses.html" class="menu-all">All courses</a>
+                        <span class="dropdown-label">Six-month programmes</span>
+                        <a href="canine-obedience.html">Canine Obedience Training</a>
+                        <a href="pet-grooming.html">Pet Grooming</a>
+                        <a href="animal-behaviour.html">Animal Behaviour</a>
+                        <a href="pet-business-management.html">Pet Business Management</a>
+                        <span class="dropdown-label">Six-week short courses</span>
+                        <a href="puppy-care.html">Puppy Care</a>
+                        <a href="pet-first-aid.html">Pet First Aid</a>
+                        <a href="basic-dog-walking.html">Basic Dog Walking</a>
+                    </div>
+                </details>
+
+                <a href="calculate-fees.html" class="active" aria-current="page">Fees</a>
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html" class="btn btn-primary mobile-cta">Enquire now &rarr;</a>
+            </nav>
+
+            <a href="enquiry.html" class="btn btn-primary header-cta">Enquire now &rarr;</a>
+
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Page hero -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Plan your studies</span>
+                <h1>Calculate your course fees.</h1>
+                <p>
+                    Select one or more courses for an instant estimate, including your
+                    multi-course discount and VAT.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Fee calculator -->
+        <section class="section">
+            <div class="container">
+
+                <form id="feeCalculator" class="fees-layout" novalidate>
+
+                    <!-- Course list -->
+                    <div class="course-list" role="group" aria-labelledby="chooseHeading">
+                        <div class="choose-head">
+                            <h2 id="chooseHeading">Choose your courses</h2>
+                            <span class="count-pill" id="selectedCount">0 selected</span>
+                        </div>
+
+                        <label class="course-option" for="canine">
+                            <input type="checkbox" id="canine" name="course" value="1500" data-name="Canine Obedience Training">
+                            <img src="images/pets.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Canine Obedience Training</strong>
+                                <span>6 months</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;1&nbsp;500,00</span>
+                        </label>
+
+                        <label class="course-option" for="grooming">
+                            <input type="checkbox" id="grooming" name="course" value="1500" data-name="Pet Grooming">
+                            <img src="images/pet-grooming.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Pet Grooming</strong>
+                                <span>6 months</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;1&nbsp;500,00</span>
+                        </label>
+
+                        <label class="course-option" for="behaviour">
+                            <input type="checkbox" id="behaviour" name="course" value="1500" data-name="Animal Behaviour">
+                            <img src="images/pet-first-aid.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Animal Behaviour</strong>
+                                <span>6 months</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;1&nbsp;500,00</span>
+                        </label>
+
+                        <label class="course-option" for="business">
+                            <input type="checkbox" id="business" name="course" value="1500" data-name="Pet Business Management">
+                            <img src="images/canine-obedience.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Pet Business Management</strong>
+                                <span>6 months</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;1&nbsp;500,00</span>
+                        </label>
+
+                        <label class="course-option" for="puppy">
+                            <input type="checkbox" id="puppy" name="course" value="750" data-name="Puppy Care">
+                            <img src="images/puppy-care.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Puppy Care</strong>
+                                <span>6 weeks</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;750,00</span>
+                        </label>
+
+                        <label class="course-option" for="firstaid">
+                            <input type="checkbox" id="firstaid" name="course" value="750" data-name="Pet First Aid">
+                            <img src="images/pet-business.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Pet First Aid</strong>
+                                <span>6 weeks</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;750,00</span>
+                        </label>
+
+                        <label class="course-option" for="walking">
+                            <input type="checkbox" id="walking" name="course" value="750" data-name="Basic Dog Walking">
+                            <img src="images/dog-walking.jpg" alt="" width="96" height="76" loading="lazy">
+                            <span class="course-option-text">
+                                <strong>Basic Dog Walking</strong>
+                                <span>6 weeks</span>
+                            </span>
+                            <span class="course-option-price">R&nbsp;750,00</span>
+                        </label>
+                    </div>
+
+                    <!-- Estimate panel -->
+                    <aside class="estimate-card" aria-live="polite">
+                        <div class="estimate-head">
+                            <h2>Your estimate</h2>
+                            <span class="estimate-count" id="estimateCount">0 courses</span>
+                        </div>
+
+                        <div class="estimate-courses" id="estimateCourses">
+                            Select a course to see your estimate.
+                        </div>
+
+                        <div class="estimate-rows">
+                            <div class="estimate-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">R&nbsp;0,00</span>
+                            </div>
+                            <div class="estimate-row discount">
+                                <span id="discountLabel">Discount (0%)</span>
+                                <span id="discount">&minus; R&nbsp;0,00</span>
+                            </div>
+                            <div class="estimate-row">
+                                <span>Total after discount</span>
+                                <span id="afterDiscount">R&nbsp;0,00</span>
+                            </div>
+                            <div class="estimate-row">
+                                <span>VAT (15%)</span>
+                                <span id="vat">R&nbsp;0,00</span>
+                            </div>
+                            <div class="estimate-row total">
+                                <span>Final amount</span>
+                                <span id="finalTotal">R&nbsp;0,00</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Enquire about these courses &rarr;</button>
+                        <button type="reset" class="btn btn-outline btn-block">Clear selection</button>
+
+                        <p class="calculator-error" id="calculatorError" role="alert"></p>
+
+                        <p class="estimate-note">
+                            The discount is applied first, then 15% VAT is added.
+                            This is an estimate only.
+                        </p>
+                    </aside>
+
+                </form>
+
+                <!-- Discount information -->
+                <div class="savings-strip">
+                    <strong>Multi-course savings</strong>
+                    <span>1 course: 5%</span>
+                    <span>2 courses: 10%</span>
+                    <span>3+ courses: 15%</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <img src="images/logo.png" alt="Pawsitive Pet Academy" class="footer-logo" width="150">
+                    <p>
+                        Friendly, practical pet care education and
+                        animal training in Durban.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="courses.html">All courses</a></li>
+                        <li><a href="calculate-fees.html">Calculate fees</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Study options</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#programmes">Six-month programmes</a></li>
+                        <li><a href="courses.html#short-courses">Six-week short courses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <p>Durban, KwaZulu-Natal</p>
+                    <p>hello@pawsitivepetacademy.co.za</p>
+                    <p>Mon&ndash;Fri, 08:00&ndash;17:00</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Pawsitive Pet Academy</span>
+                <span>Care. Connect. Grow.</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

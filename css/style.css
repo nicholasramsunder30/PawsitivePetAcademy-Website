@@ -1,0 +1,1725 @@
+   /* =====================================
+   PAWSITIVE PET ACADEMY
+   ===================================== */
+
+
+/* ---------- 1. COLOURS AND BASE ---------- */
+
+:root {
+    --butter-yellow: #FFDB58;
+    --yellow-soft: #FDF5D9;
+    --baby-blue: #ACDCFF;
+    --blue-soft: #EAF4FD;
+    --ink: #1C262D;
+    --muted: #5B6670;
+    --page: #FAF8F4;
+    --white: #FFFFFF;
+    --line: #E4E2DC;
+    --error: #B42318;
+
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 32px;
+
+    --heading-font: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+    --body-font: "DM Sans", Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    background-color: var(--page);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--ink);
+    margin: 0 0 16px;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 84px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: clamp(32px, 4.4vw, 60px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+p {
+    color: var(--muted);
+    margin: 0 0 16px;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.lead {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: var(--ink);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 8px;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+
+/* ---------- 2. BUTTONS ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 999px;
+    border: 1.5px solid var(--ink);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--butter-yellow);
+    color: var(--ink);
+}
+
+.btn-primary:hover {
+    background-color: var(--baby-blue);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--ink);
+}
+
+.btn-outline:hover {
+    background-color: var(--ink);
+    color: var(--white);
+}
+
+.btn-dark {
+    background-color: var(--ink);
+    color: var(--white);
+}
+
+.btn-dark:hover {
+    background-color: #33414B;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-link {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: var(--ink);
+}
+
+.btn:focus-visible,
+.text-link:focus-visible,
+.main-nav a:focus-visible,
+.dropdown summary:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid #2775A6;
+    outline-offset: 3px;
+}
+
+
+/* ---------- 3. TOP BAR AND HEADER ---------- */
+
+.topbar {
+    background-color: var(--ink);
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.site-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 96px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-nav > a,
+.dropdown summary {
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav > a:hover,
+.dropdown summary:hover {
+    color: var(--ink);
+    background-color: var(--blue-soft);
+}
+
+.main-nav > a.active,
+.dropdown.active summary {
+    color: var(--ink);
+    font-weight: 700;
+    background-color: var(--blue-soft);
+}
+
+.header-cta {
+    padding: 12px 26px;
+}
+
+
+/* ---------- 4. COURSES DROPDOWN ---------- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown summary::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-left: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.dropdown[open] summary::after {
+    transform: translateY(1px) rotate(-135deg);
+}
+
+.dropdown[open] summary {
+    color: var(--ink);
+    background-color: var(--blue-soft);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 290px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px;
+    box-shadow: 0 18px 40px rgba(28, 38, 45, 0.12);
+    z-index: 1100;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    line-height: 1.35;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--blue-soft);
+}
+
+.dropdown-menu a.current {
+    background-color: var(--yellow-soft);
+    font-weight: 700;
+}
+
+.dropdown-menu .menu-all {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.dropdown-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 12px 12px 4px;
+    border-top: 1px solid var(--line);
+    margin-top: 6px;
+}
+
+
+/* ---------- 5. SECTIONS ---------- */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-blue {
+    background-color: var(--blue-soft);
+}
+
+.section-cream {
+    background-color: var(--yellow-soft);
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.section-head h2 {
+    margin-bottom: 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.split-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+
+/* ---------- 6. HOME HERO ---------- */
+
+.home-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--yellow-soft);
+    min-height: 640px;
+}
+
+.home-hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px max(28px, calc((100vw - 1240px) / 2 + 28px));
+}
+
+.home-hero-text p {
+    font-size: 21px;
+    max-width: 560px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 28px 0 36px;
+}
+
+.hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.hero-points li::before {
+    content: "✓ ";
+    color: var(--ink);
+}
+
+.home-hero-image {
+    position: relative;
+    border-bottom-left-radius: 120px;
+    overflow: hidden;
+}
+
+.home-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-card {
+    position: absolute;
+    left: 36px;
+    bottom: 36px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border-radius: var(--radius);
+    padding: 20px 26px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.floating-card strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.floating-card span {
+    color: var(--muted);
+}
+
+
+/* ---------- 7. PAGE HERO (inner pages) ---------- */
+
+.page-hero {
+    background: linear-gradient(115deg, var(--yellow-soft) 0%, #F4F6F2 55%, var(--blue-soft) 100%);
+    text-align: center;
+    padding: 110px 0 100px;
+}
+
+.page-hero h1 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-hero p {
+    font-size: 21px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page-hero .hero-buttons {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.breadcrumb {
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+.breadcrumb a {
+    color: var(--muted);
+}
+
+
+/* ---------- 8. COURSE CARDS ---------- */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.course-grid.two-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(28, 38, 45, 0.10);
+}
+
+.course-card-image {
+    position: relative;
+    height: 300px;
+}
+
+.course-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--butter-yellow);
+    color: var(--ink);
+    font-family: var(--heading-font);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 999px;
+}
+
+.course-card .badge {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+
+.course-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 32px;
+}
+
+.course-card-body h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.course-card-body p {
+    flex: 1;
+}
+
+.price {
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 10px 0 24px;
+}
+
+.price small {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 6px;
+}
+
+
+/* ---------- 9. WHY CHOOSE US / FEATURES ---------- */
+
+.rounded-photo {
+    border-radius: 120px var(--radius-lg) var(--radius-lg) var(--radius-lg);
+    overflow: hidden;
+}
+
+.rounded-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+    border-top: 1px solid var(--line);
+}
+
+.feature-list li {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.feature-list h3 {
+    margin-bottom: 6px;
+}
+
+.feature-list p {
+    margin: 0;
+}
+
+.number-circle {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: var(--butter-yellow);
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--ink);
+}
+
+
+/* ---------- 10. ABOUT PAGE ---------- */
+
+.photo-stack {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.photo-stack .main-photo {
+    border-radius: var(--radius-lg) 120px var(--radius-lg) var(--radius-lg);
+    overflow: hidden;
+}
+
+.photo-stack .main-photo img {
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+}
+
+.photo-stack .circle-photo {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border: 12px solid var(--page);
+    overflow: hidden;
+}
+
+.photo-stack .circle-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.value-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 36px;
+}
+
+.value-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 8px 26px rgba(28, 38, 45, 0.06);
+}
+
+.value-card h3 {
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.teach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.teach-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 44px;
+}
+
+.teach-number {
+    display: inline-block;
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 4px solid var(--butter-yellow);
+    margin-bottom: 56px;
+}
+
+
+/* ---------- 11. CALL TO ACTION BAND ---------- */
+
+.cta-band {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    background-color: var(--butter-yellow);
+    border-radius: var(--radius-lg);
+    padding: 80px;
+}
+
+.cta-band .eyebrow {
+    color: var(--ink);
+}
+
+.cta-band h2 {
+    margin-bottom: 10px;
+}
+
+.cta-band p {
+    color: #3D4A53;
+    margin: 0;
+    font-size: 19px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+/* ---------- 12. FOOTER ---------- */
+
+.site-footer {
+    background-color: var(--ink);
+    color: #C9D1D6;
+    padding: 90px 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 14px;
+}
+
+.site-footer p {
+    color: #C9D1D6;
+}
+
+.site-footer h3 {
+    color: var(--white);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: #C9D1D6;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--butter-yellow);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid #36434C;
+    margin-top: 60px;
+    padding-top: 28px;
+    font-size: 15px;
+}
+
+
+/* ---------- 13. COURSE COMPARISON TABLE ---------- */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+}
+
+.comparison-table caption {
+    text-align: left;
+    padding: 20px 24px 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    text-align: left;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--line);
+}
+
+.comparison-table thead th {
+    font-family: var(--heading-font);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    background-color: var(--page);
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: var(--yellow-soft);
+}
+
+.comparison-table td a {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration-color: var(--butter-yellow);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+.comparison-table .fee {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.type-pill {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: var(--yellow-soft);
+}
+
+.type-pill.short {
+    background-color: var(--blue-soft);
+}
+
+
+/* ---------- 14. FEE CALCULATOR ---------- */
+
+.fees-layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
+    align-items: start;
+}
+
+.choose-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.choose-head h2 {
+    margin: 0;
+}
+
+.count-pill {
+    background-color: var(--baby-blue);
+    color: var(--ink);
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.course-option {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background-color: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.course-option:hover {
+    border-color: var(--baby-blue);
+}
+
+.course-option:has(input:checked) {
+    border-color: var(--ink);
+    background-color: var(--yellow-soft);
+}
+
+.course-option input,
+.check-card input {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    accent-color: var(--ink);
+    cursor: pointer;
+}
+
+.course-option img {
+    width: 96px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.course-option-text {
+    flex: 1;
+}
+
+.course-option-text strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 19px;
+}
+
+.course-option-text span {
+    color: var(--muted);
+}
+
+.course-option-price {
+    font-family: var(--heading-font);
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.estimate-card {
+    position: sticky;
+    top: 130px;
+    background-color: var(--ink);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: 0 20px 50px rgba(28, 38, 45, 0.25);
+}
+
+.estimate-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3A4852;
+}
+
+.estimate-head h2 {
+    color: var(--white);
+    font-size: 26px;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.estimate-count {
+    color: var(--butter-yellow);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.estimate-courses {
+    color: #C9D1D6;
+    padding: 18px 0;
+    margin: 0;
+    border-bottom: 1px solid #3A4852;
+    min-height: 64px;
+}
+
+.estimate-courses ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.estimate-rows {
+    margin: 18px 0;
+}
+
+.estimate-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: var(--white);
+}
+
+.estimate-row.discount {
+    color: var(--butter-yellow);
+}
+
+.estimate-row.total {
+    border-top: 1px solid #3A4852;
+    margin-top: 10px;
+    padding-top: 18px;
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.estimate-note {
+    color: #9AA6AE;
+    font-size: 14px;
+    margin: 12px 0 0;
+}
+
+.estimate-card .btn-outline {
+    color: var(--white);
+    border-color: #5B6670;
+    margin-top: 12px;
+}
+
+.estimate-card .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--ink);
+}
+
+.calculator-error {
+    color: #FFB4A9;
+    font-weight: 700;
+    margin: 12px 0 0;
+    min-height: 1em;
+}
+
+.savings-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--yellow-soft);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-top: 80px;
+    font-size: 19px;
+}
+
+.savings-strip strong {
+    font-family: var(--heading-font);
+}
+
+
+/* ---------- 15. FORMS ---------- */
+
+.form-step {
+    margin-bottom: 64px;
+}
+
+.step-head {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 32px;
+}
+
+.step-head h2 {
+    font-size: 38px;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.step-head p {
+    margin: 2px 0 0;
+}
+
+.step-head .number-circle {
+    width: 62px;
+    height: 62px;
+    font-size: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 22px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    display: block;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: #3D4A53;
+    margin-bottom: 10px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: var(--body-font);
+    font-size: 17px;
+    color: var(--ink);
+    background-color: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s ease;
+}
+
+.field textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--baby-blue);
+    box-shadow: 0 0 0 4px rgba(172, 220, 255, 0.45);
+}
+
+.check-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+}
+
+.check-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    background-color: var(--white);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.check-card:hover {
+    border-color: var(--baby-blue);
+}
+
+.check-card:has(input:checked) {
+    border-color: var(--ink);
+    background-color: var(--yellow-soft);
+}
+
+.check-card strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 18px;
+}
+
+.check-card span {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.submit-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--yellow-soft);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+}
+
+.submit-bar h3 {
+    margin-bottom: 4px;
+}
+
+.submit-bar p {
+    margin: 0;
+}
+
+.required {
+    color: var(--error);
+}
+
+.form-note {
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.field-error {
+    display: block;
+    color: var(--error);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.field-error:empty {
+    display: none;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid,
+.check-grid.invalid .check-card {
+    border-color: var(--error);
+    background-color: #FFF6F5;
+}
+
+.form-success {
+    background-color: var(--blue-soft);
+    border-left: 6px solid var(--baby-blue);
+    border-radius: var(--radius-sm);
+    padding: 20px 24px;
+    color: var(--ink);
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.form-success:focus {
+    outline: 3px solid var(--baby-blue);
+}
+
+
+/* ---------- 16. CONTACT PAGE ---------- */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.contact-list .number-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+    background-color: var(--baby-blue);
+}
+
+.contact-list strong {
+    display: block;
+    font-family: var(--heading-font);
+}
+
+.contact-list span,
+.contact-list a {
+    color: var(--muted);
+}
+
+.contact-photo {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.contact-photo img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.form-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    box-shadow: 0 16px 40px rgba(28, 38, 45, 0.07);
+}
+
+.form-card h2 {
+    font-size: 36px;
+}
+
+
+/* ---------- 17. COURSE DETAIL PAGES ---------- */
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.detail-photo {
+    border-radius: var(--radius-lg) 120px var(--radius-lg) var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 48px;
+}
+
+.detail-photo img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.info-card {
+    position: sticky;
+    top: 130px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+}
+
+.info-card .price {
+    font-size: 34px;
+    margin: 6px 0 20px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.info-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.info-list li span {
+    color: var(--muted);
+}
+
+.info-list li strong {
+    text-align: right;
+}
+
+.info-card .btn {
+    margin-bottom: 12px;
+}
+
+.learn-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.learn-list li {
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px 16px 52px;
+    position: relative;
+    font-weight: 500;
+}
+
+.learn-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--butter-yellow);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-content h2 {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+}
+
+
+/* ---------- 18. RESPONSIVE: TABLET ---------- */
+
+@media (max-width: 1100px) {
+
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--line);
+        padding: 16px 28px 28px;
+        box-shadow: 0 16px 30px rgba(28, 38, 45, 0.10);
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+    }
+
+    .site-header.nav-open .main-nav {
+        display: flex;
+    }
+
+    .main-nav .mobile-cta {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-top: 6px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .split,
+    .split-media,
+    .contact-layout,
+    .detail-layout,
+    .fees-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .estimate-card,
+    .info-card {
+        position: static;
+    }
+
+    .photo-stack .circle-photo {
+        right: 0;
+    }
+
+    .cta-band {
+        grid-template-columns: 1fr;
+        padding: 56px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* The Enquire button inside the menu is only for mobile */
+@media (min-width: 1101px) {
+    .main-nav .mobile-cta {
+        display: none;
+    }
+}
+
+
+/* ---------- 19. RESPONSIVE: MOBILE ---------- */
+
+@media (max-width: 760px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .topbar .container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topbar-tagline {
+        display: none;
+    }
+
+    .header-inner {
+        min-height: 78px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .main-nav {
+        padding: 12px 18px 24px;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .home-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .home-hero-text {
+        padding: 56px 18px;
+    }
+
+    .home-hero-image {
+        height: 380px;
+        border-bottom-left-radius: 64px;
+    }
+
+    .home-hero-text p,
+    .page-hero p,
+    .lead {
+        font-size: 18px;
+    }
+
+    .page-hero {
+        padding: 72px 0 64px;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-grid,
+    .course-grid.two-col,
+    .value-cards,
+    .form-grid,
+    .check-grid,
+    .learn-list,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card-image {
+        height: 230px;
+    }
+
+    .course-card-body,
+    .teach-card,
+    .form-card,
+    .estimate-card,
+    .info-card {
+        padding: 26px;
+    }
+
+    .photo-stack .circle-photo {
+        width: 170px;
+        height: 170px;
+        border-width: 8px;
+    }
+
+    .cta-band {
+        padding: 40px 26px;
+    }
+
+    .course-option {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .course-option img {
+        width: 72px;
+        height: 60px;
+    }
+
+    .course-option-price {
+        width: 100%;
+        padding-left: 36px;
+    }
+
+    .savings-strip {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 48px;
+    }
+
+    .submit-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .step-head h2 {
+        font-size: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    /* Comparison table becomes stacked cards on small phones */
+    .comparison-table {
+        min-width: 0;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tr {
+        display: block;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 0;
+    }
+
+    .comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        border: none;
+        padding: 6px 20px;
+        text-align: right;
+    }
+
+    .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--muted);
+        text-align: left;
+    }
+}

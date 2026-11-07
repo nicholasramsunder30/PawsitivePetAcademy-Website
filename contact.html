@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pawsitive Pet Academy in Durban.">
+    <title>Contact Us | Pawsitive Pet Academy</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans (headings) and DM Sans (body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <div class="container">
+            <span>Durban, KwaZulu-Natal</span>
+            <span class="topbar-tagline">Professional pet care education for every companion</span>
+        </div>
+    </div>
+
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Pawsitive Pet Academy home" width="150">
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+                Menu
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <details class="dropdown">
+                    <summary>Courses</summary>
+
+                    <div class="dropdown-menu">
+                        <a href="courses.html" class="menu-all">All courses</a>
+                        <span class="dropdown-label">Six-month programmes</span>
+                        <a href="canine-obedience.html">Canine Obedience Training</a>
+                        <a href="pet-grooming.html">Pet Grooming</a>
+                        <a href="animal-behaviour.html">Animal Behaviour</a>
+                        <a href="pet-business-management.html">Pet Business Management</a>
+                        <span class="dropdown-label">Six-week short courses</span>
+                        <a href="puppy-care.html">Puppy Care</a>
+                        <a href="pet-first-aid.html">Pet First Aid</a>
+                        <a href="basic-dog-walking.html">Basic Dog Walking</a>
+                    </div>
+                </details>
+
+                <a href="calculate-fees.html">Fees</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+                <a href="enquiry.html" class="btn btn-primary mobile-cta">Enquire now &rarr;</a>
+            </nav>
+
+            <a href="enquiry.html" class="btn btn-primary header-cta">Enquire now &rarr;</a>
+
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Page hero -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Contact us</span>
+                <h1>We'd love to hear from you.</h1>
+                <p>
+                    Have a question about our courses or want to learn more about
+                    Pawsitive Pet Academy? Get in touch with our team.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Contact details and form -->
+        <section class="section">
+            <div class="container contact-layout">
+
+                <div>
+                    <span class="eyebrow">Get in touch</span>
+                    <h2>Talk to our team.</h2>
+                    <p class="lead">
+                        We're happy to help you choose a course or answer any
+                        questions about studying with us.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <span class="number-circle">01</span>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Durban, KwaZulu-Natal</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="number-circle">02</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:hello@pawsitivepetacademy.co.za">hello@pawsitivepetacademy.co.za</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="number-circle">03</span>
+                            <div>
+                                <strong>Office hours</strong>
+                                <span>Mon&ndash;Fri, 08:00&ndash;17:00</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="contact-photo">
+                        <img src="images/animal-behaviour.jpg" alt="Cat and dog cuddling in the grass" width="600" height="375" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h2>Send us a message</h2>
+                    <p class="form-note">Fields marked with <span class="required">*</span> are required.</p>
+
+                    <form id="contactForm" novalidate
+                          data-success="Your message has been checked and is ready to send. Please note: this is a student demonstration website, so no message has actually been sent. To reach us, please email hello@pawsitivepetacademy.co.za.">
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="name">Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="First name"
+                                       autocomplete="given-name" required aria-describedby="nameError">
+                                <span class="field-error" id="nameError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com"
+                                       autocomplete="email" required aria-describedby="emailError">
+                                <span class="field-error" id="emailError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="phone">Contact number (optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567"
+                                       autocomplete="tel" aria-describedby="phoneError">
+                                <span class="field-error" id="phoneError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" placeholder="What is it about?"
+                                       required aria-describedby="subjectError">
+                                <span class="field-error" id="subjectError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field full">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" placeholder="How can we help?"
+                                          required aria-describedby="messageError"></textarea>
+                                <span class="field-error" id="messageError" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send message &rarr;</button>
+
+                        <div class="form-success" role="status" tabindex="-1" hidden></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <img src="images/logo.png" alt="Pawsitive Pet Academy" class="footer-logo" width="150">
+                    <p>
+                        Friendly, practical pet care education and
+                        animal training in Durban.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="courses.html">All courses</a></li>
+                        <li><a href="calculate-fees.html">Calculate fees</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Study options</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#programmes">Six-month programmes</a></li>
+                        <li><a href="courses.html#short-courses">Six-week short courses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <p>Durban, KwaZulu-Natal</p>
+                    <p>hello@pawsitivepetacademy.co.za</p>
+                    <p>Mon&ndash;Fri, 08:00&ndash;17:00</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Pawsitive Pet Academy</span>
+                <span>Care. Connect. Grow.</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
